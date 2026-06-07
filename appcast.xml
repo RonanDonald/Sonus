@@ -3,19 +3,18 @@
     <channel>
         <title>Sonus</title>
         <item>
-            <title>1.79</title>
+            <title>1.80</title>
             <description><![CDATA[
-                <h3>What's New in v1.79</h3>
+                <h3>What's New in v1.80</h3>
                 <ul>
-                    <li>🛠️ Fixed AppleScript paste crash</li>
-                    <li>⌨️ Fixed accidental Fn shortcut triggers</li>
+                    <li>✨ Initial Open Source Release</li>
                 </ul>
             ]]></description>
-            <pubDate>Sat, 23 May 2026 20:23:30 +0545</pubDate>
-            <sparkle:version>179</sparkle:version>
-            <sparkle:shortVersionString>1.79</sparkle:shortVersionString>
+            <pubDate>Sun, 07 Jun 2026 12:00:00 +0000</pubDate>
+            <sparkle:version>180</sparkle:version>
+            <sparkle:shortVersionString>1.80</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.4</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/RonanDonald/Sonus/releases/download/v1.79/Sonus.dmg" length="14406786" type="application/octet-stream" sparkle:edSignature="TI2RXCaX+lx8Dp7fERw9B4Ef+xHwJQxsshBnDClUAKsyafQjfM4DYOCm3Iz9dF7VaajUZccafIktBDsbtuRzCA=="/>
+            <enclosure url="https://github.com/RonanDonald/Sonus/releases/download/v1.80/Sonus.dmg" length="0" type="application/octet-stream" sparkle:edSignature="WILL_BE_GENERATED_LATER"/>
         </item>
     </channel>
 </rss>
