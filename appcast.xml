@@ -14,7 +14,7 @@
             <sparkle:version>180</sparkle:version>
             <sparkle:shortVersionString>1.80</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.4</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/RonanDonald/Sonus/releases/download/v1.80/Sonus.dmg" length="0" type="application/octet-stream" sparkle:edSignature="WILL_BE_GENERATED_LATER"/>
+            <enclosure url="https://github.com/RonanDonald/Sonus/releases/download/1.8.0/Sonus.dmg" length="0" type="application/octet-stream" sparkle:edSignature="WILL_BE_GENERATED_LATER"/>
         </item>
     </channel>
 </rss>
