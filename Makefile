@@ -4,7 +4,7 @@ WHISPER_CPP_DIR := $(DEPS_DIR)/whisper.cpp
 FRAMEWORK_PATH := $(WHISPER_CPP_DIR)/build-apple/whisper.xcframework
 LOCAL_DERIVED_DATA := $(CURDIR)/.local-build
 
-.PHONY: all clean whisper setup build local check healthcheck help dev run
+.PHONY: all clean whisper setup build local dmg check healthcheck help dev run
 
 # Default target
 all: check build
@@ -76,6 +76,17 @@ local: check setup
 		exit 1; \
 	fi
 
+# Create a DMG for distribution
+dmg: local
+	@echo "Creating Sonus.dmg..."
+	@rm -f "$$HOME/Downloads/Sonus.dmg"
+	@mkdir -p "$$HOME/Downloads/dmg_staging"
+	@cp -R "$$HOME/Downloads/Sonus.app" "$$HOME/Downloads/dmg_staging/"
+	@ln -s /Applications "$$HOME/Downloads/dmg_staging/Applications"
+	@hdiutil create -volname Sonus -srcfolder "$$HOME/Downloads/dmg_staging" -ov -format UDZO "$$HOME/Downloads/Sonus.dmg"
+	@rm -rf "$$HOME/Downloads/dmg_staging"
+	@echo "DMG created at ~/Downloads/Sonus.dmg"
+
 # Run application
 run:
 	@if [ -d "$$HOME/Downloads/Sonus.app" ]; then \
@@ -107,6 +118,7 @@ help:
 	@echo "  setup              Copy whisper XCFramework to Sonus project"
 	@echo "  build              Build the Sonus Xcode project"
 	@echo "  local              Build for local use (no Apple Developer certificate needed)"
+	@echo "  dmg                Build the app and package it into a DMG file"
 	@echo "  run                Launch the built Sonus app"
 	@echo "  dev                Build and run the app (for development)"
 	@echo "  all                Run full build process (default)"
